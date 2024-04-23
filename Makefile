@@ -26,4 +26,4 @@ all: $(LANGS)
 $(LANGS):
 	$(MAKE) -C $@
 
-.PHONY: all $(LANGS)
+.PHONY: all clean test $(LANGS)
