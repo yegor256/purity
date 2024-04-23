@@ -39,5 +39,5 @@ jobs:
       - uses: ruby/setup-ruby@master
         with:
           ruby-version: '3.1'
-      - run: sudo apt-get install gnu-smalltalk
+      - run: sudo apt-get install gnu-smalltalk=3.2.5-1.3ubuntu1
       - run: make
