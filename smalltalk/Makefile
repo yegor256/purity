@@ -20,15 +20,5 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-module Purity
-    class Fibonacci
-        def initialize(n)
-            @n = n
-        end
-
-        def get
-            return 1 if @n < 2
-            Fibonacci.new(@n - 1).get + Fibonacci.new(@n - 2).get
-        end
-    end
-end
+all:
+	gst app.st

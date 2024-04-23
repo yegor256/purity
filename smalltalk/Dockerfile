@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2024 Yegor Bugayenko
+# Copyright (c) 2021-2024 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,15 +20,19 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-module Purity
-    class Fibonacci
-        def initialize(n)
-            @n = n
-        end
+FROM ubuntu:22.04
 
-        def get
-            return 1 if @n < 2
-            Fibonacci.new(@n - 1).get + Fibonacci.new(@n - 2).get
-        end
-    end
-end
+ENV DEBIAN_FRONTEND=noninteractive
+
+SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
+
+# Build essentials that are required later
+RUN apt-get update -y --fix-missing \
+  && apt-get -y install --no-install-recommends \
+    gnu-smalltalk \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /purify
+
+COPY . /purify
