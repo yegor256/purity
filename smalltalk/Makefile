@@ -20,5 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+.SHELLFLAGS: -e -o pipefail -c
+.ONESHELL:
+
 all:
 	gst app.st --smalltalk-args 23
