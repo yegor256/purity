@@ -22,24 +22,30 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 "
 
-"Main app"
-Object subclass: App [
-  App class >> new [
-    |r|
+"Fibonacci object"
+Object subclass: Fibonacci [
+  |n|
+  Fibonacci class >> new [
+    | r |
     r := super new.
     ^r
   ]
 
-  main: n [
-    |f r|
-    f := Fibonacci new.
-    f set: n.
-    r := f get.
-    r printNl.
+  set: x [
+     n := x.
+  ]
+
+  get [
+    (n < 2)
+      ifTrue: [ ^ 1 ]
+      ifFalse: [
+        |a b|
+        a := Fibonacci new.
+        a set: (n - 1).
+        b := Fibonacci new.
+        b set: (n - 2).
+        ^ (a get) + (b get)
+      ].
+    ^ n
   ]
 ]
-
-FileStream fileIn: 'fibonacci.st'.
-
-a := App new.
-a main: ((Smalltalk arguments at: 1) asNumber).

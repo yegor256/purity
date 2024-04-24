@@ -21,4 +21,4 @@
 # SOFTWARE.
 
 all:
-	gst app.st
+	gst app.st 23
