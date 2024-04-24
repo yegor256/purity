@@ -21,4 +21,4 @@
 # SOFTWARE.
 
 all:
-	gst app.st 23
+	gst app.st --smalltalk-args 23
