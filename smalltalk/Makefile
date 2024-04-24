@@ -22,6 +22,7 @@
 
 .SHELLFLAGS: -e -o pipefail -c
 .ONESHELL:
+.PHONY: all
 
 all:
 	gst app.st --smalltalk-args 23

@@ -22,6 +22,7 @@
 
 .SHELLFLAGS: -e -o pipefail -c
 .ONESHELL:
+.PHONY: all
 
 all:
 	ruby app.rb 23
