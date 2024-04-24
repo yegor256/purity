@@ -29,7 +29,7 @@ SHELL ["/bin/bash", "-eo", "pipefail", "-c"]
 # Build essentials that are required later
 RUN apt-get update -y --fix-missing \
   && apt-get -y install --no-install-recommends \
-    gnu-smalltalk \
+    gnu-smalltalk=3.2.5-1.3ubuntu1 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
