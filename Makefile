@@ -26,7 +26,9 @@ LANGS := $(wildcard */.)
 .ONESHELL:
 .PHONY: all clean test $(LANGS)
 
+N := 23
+
 all: $(LANGS)
 $(LANGS):
-	$(MAKE) -C $@
+	$(MAKE) -C $@ N=${N}
 

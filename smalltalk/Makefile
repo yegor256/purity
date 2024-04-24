@@ -25,4 +25,4 @@
 .PHONY: all
 
 all:
-	gst app.st --smalltalk-args 23
+	gst app.st --smalltalk-args ${N}

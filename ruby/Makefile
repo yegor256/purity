@@ -25,4 +25,4 @@
 .PHONY: all
 
 all:
-	ruby app.rb 23
+	ruby app.rb ${N}
