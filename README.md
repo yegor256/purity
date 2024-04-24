@@ -8,5 +8,7 @@ number. Just for fun.
 
 The languages are:
 
-  * [Ruby](/ruby)
-  * Smalltalk
+* [Ruby](/ruby)
+* [Smalltalk](/smalltalk)
+
+If you know any other "pure" OOP languages, submit a pull request.
