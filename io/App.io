@@ -1,7 +1,7 @@
 App := Object clone
 App main := method(
     n,
-    f := Fibonacci;
+    f := Fibonacci clone(n);
     r := f get;
     r print
 )
