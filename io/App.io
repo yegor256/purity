@@ -30,7 +30,7 @@ App main := method(
     r print
 )
 
-n := System args at(0)
+n := System args at(1)
 writeln("n = ", n)
 app := App clone
 app main(n)
