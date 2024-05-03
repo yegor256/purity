@@ -6,6 +6,6 @@ App main := method(
     r print
 )
 
-n := app at(1)
+n := System at(1)
 app := App clone
 app main(n)
