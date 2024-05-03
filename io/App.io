@@ -28,11 +28,10 @@ App main := method(
     f := Fibonacci clone;
     f n := n;
     r := f get;
-    r print
+    writeln(n, "th fibonacci number is ", r)
 )
 
 n := System args at(1) asNumber
 if(n < 0, writeln("n must be positive!"))
 app := App clone
-r := app main(n)
-writeln(n, "th fibonacci number is ", r)
+app main(n)
