@@ -25,4 +25,4 @@
 .PHONY: all
 
 all:
-    echo 'Does not work :('
+    io App.io ${N}

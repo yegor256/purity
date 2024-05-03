@@ -20,25 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ---
-name: make
-'on':
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-concurrency:
-  group: make-${{ github.ref }}
-  cancel-in-progress: true
-jobs:
-  make:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@master
-      - uses: ruby/setup-ruby@master
-        with:
-          ruby-version: '3.1'
-      - run: sudo apt-get install gnu-smalltalk=3.2.5-1.3ubuntu1
-      - uses: ./io
-      - run: make
+name: 'io'
+description: 'Setup IO language'
+runs:
+  using: 'docker'
+  image: Dockerfile
