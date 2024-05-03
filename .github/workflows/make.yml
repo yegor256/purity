@@ -41,7 +41,7 @@ jobs:
           ruby-version: '3.1'
       - run: sudo apt-get install gnu-smalltalk=3.2.5-1.3ubuntu1
       - run: |
-          ENV GIT_SSL_NO_VERIFY=1
+          GIT_SSL_NO_VERIFY=1
           apt-get update -y --fix-missing \
             && apt-get -y install --no-install-recommends \
               cmake=3.22.1-1ubuntu1.22.04.2 \
