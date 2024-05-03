@@ -46,7 +46,7 @@ jobs:
           sudo apt-get update -y --fix-missing \
             && sudo apt-get -y install --no-install-recommends \
               cmake=3.22.1-1ubuntu1.22.04.2 \
-              build-essential=12.9ubuntu3
+              build-essential=12.9ubuntu3 \
             && sudo apt-get clean \
             && sudo rm -rf /var/lib/apt/lists/*
           cd /tmp \
