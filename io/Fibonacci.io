@@ -24,13 +24,14 @@
 
 Fibonacci := Object clone
 Fibonacci n := 0
-Fibonacci init := method(x, n := x)
 Fibonacci get := method(
     if(
         n < 2,
         1,
-        left := Fibonacci clone(n - 1);
-        right := Fibonacci clone(n - 2);
+        left := Fibonacci clone;
+        left n := n - 1;
+        right := Fibonacci clone;
+        right n := n - 2;
         (left get) + (right get)
     )
 )

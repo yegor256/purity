@@ -25,7 +25,8 @@
 App := Object clone
 App main := method(
     n,
-    f := Fibonacci clone(n);
+    f := Fibonacci clone;
+    f n := n;
     r := f get;
     r print
 )
