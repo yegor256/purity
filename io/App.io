@@ -33,6 +33,6 @@ App main := method(
 
 n := System args at(1) asNumber
 if(n < 0, writeln("n must be positive!"))
-writeln("n is ", n)
 app := App clone
-app main(n)
+r := app main(n)
+writeln(n, "th fibonacci number is ", r)
