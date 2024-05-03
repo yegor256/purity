@@ -31,7 +31,7 @@ App main := method(
     r print
 )
 
-n := System args at(1)
+n := System args at(1) asNumber
 if(n < 0, writeln("n must be positive!"))
 app := App clone
 app main(n)
