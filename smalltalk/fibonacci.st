@@ -26,7 +26,7 @@ SOFTWARE.
 Object subclass: Fibonacci [
   |n|
   Fibonacci class >> new [
-    | r |
+    |r|
     r := super new.
     ^r
   ]
