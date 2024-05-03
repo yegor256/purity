@@ -25,4 +25,4 @@
 .PHONY: all
 
 all:
-    io App.io ${N}
+	io App.io ${N}
