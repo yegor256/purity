@@ -32,6 +32,6 @@ App main := method(
 )
 
 n := System args at(1)
-writeln("n = ", n)
+if(n < 0, writeln("n must be positive!"))
 app := App clone
 app main(n)
