@@ -28,7 +28,7 @@ App main := method(
     f := Fibonacci clone;
     f n := n;
     r := f get;
-    writeln(n, "th fibonacci number is ", r)
+    writeln(n, "th Fibonacci number is ", r)
 )
 
 n := System args at(1) asNumber

@@ -27,7 +27,7 @@ module Purity
         def main(n)
             f = Fibonacci.new(n)
             r = f.get
-            puts r
+            puts "#{n}th Fibonacci number is #{r}"
         end
     end
 end
