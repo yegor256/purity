@@ -10,5 +10,6 @@ The languages are:
 
 * [Ruby](/ruby)
 * [Smalltalk](/smalltalk)
+* [Io](/io)
 
 If you know any other "pure" OOP languages, submit a pull request.

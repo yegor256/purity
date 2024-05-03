@@ -25,4 +25,6 @@
 .PHONY: all
 
 all:
+	env
+	ls /usr/local/bin
 	io App.io ${N}
