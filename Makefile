@@ -22,7 +22,7 @@
 
 LANGS := $(wildcard */.)
 
-.SHELLFLAGS: -e -o pipefail -c
+.SHELLFLAGS := -e -o pipefail -c
 .ONESHELL:
 .PHONY: all clean test $(LANGS)
 
