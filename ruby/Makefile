@@ -23,6 +23,7 @@
 .SHELLFLAGS := -e -o pipefail -c
 .ONESHELL:
 .PHONY: all
+SHELL := /bin/bash
 
 all:
 	ruby app.rb ${N}

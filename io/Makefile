@@ -23,6 +23,7 @@
 .SHELLFLAGS := -e -o pipefail -c
 .ONESHELL:
 .PHONY: all
+SHELL := /bin/bash
 
 all:
 	io App.io ${N}

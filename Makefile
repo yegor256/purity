@@ -20,12 +20,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-LANGS := $(wildcard */.)
-
 .SHELLFLAGS := -e -o pipefail -c
 .ONESHELL:
 .PHONY: all clean test $(LANGS)
+SHELL := /bin/bash
 
+LANGS := $(wildcard */.)
 N := 23
 
 all: $(LANGS)
