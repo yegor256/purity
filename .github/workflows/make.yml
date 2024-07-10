@@ -42,7 +42,7 @@ jobs:
           distribution: 'temurin'
           java-version: 20
       - uses: coursier/setup-action@v1
-      - run: cs install scalac:2.12.15
+      - run: cs install scalac:3.4.2
       - run: scalac --version
       - uses: ruby/setup-ruby@master
         with:
