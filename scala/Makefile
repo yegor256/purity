@@ -26,9 +26,9 @@
 SHELL := /bin/bash
 N := 23
 
-scala.jar:
-	wget https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar -O $@
-
 all: *.sc scala.jar
 	scalac *.sc
 	java -cp "scala.jar:." App ${N}
+
+scala.jar:
+	wget https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar -O $@
