@@ -20,11 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-class Fibonacci(var n: Int):
+class Fibonacci(var n: Int) {
   def get: Int =
     if (n < 2) {
       1
     } else {
-      new Fibonacci(n - 1).get + new Fibonacci(n - 2).get
+      var a: Int = new Fibonacci(n - 1).get;
+      var b: Int = new Fibonacci(n - 2).get;
+      a + b
     }
-end Fibonacci
+}

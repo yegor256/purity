@@ -36,8 +36,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@master
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 20
       - uses: olafurpg/setup-scala@v14
-      - run: env
+      - run: which scalac
       - uses: ruby/setup-ruby@master
         with:
           ruby-version: '3.1'
