@@ -26,8 +26,9 @@
 SHELL := /bin/bash
 N := 23
 
-LIB=/opt/homebrew/Cellar/pmd/7.2.0/libexec/lib/scala-library-2.13.13.jar
+scala.jar:
+	wget https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar -O $@
 
-all: *.sc
+all: *.sc scala.jar
 	scalac *.sc
-	java -cp "${LIB}:." App ${N}
+	java -cp "scala.jar:." App ${N}
