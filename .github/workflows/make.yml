@@ -36,6 +36,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@master
+      - uses: olafurpg/setup-scala@v11
       - uses: ruby/setup-ruby@master
         with:
           ruby-version: '3.1'
@@ -49,6 +50,8 @@ jobs:
               build-essential=12.9ubuntu3 \
             && sudo apt-get clean \
             && sudo rm -rf /var/lib/apt/lists/*
+      - run: |
+          set -e
           cd /tmp \
             && git clone --recursive https://github.com/IoLanguage/io.git \
             && cd io \
