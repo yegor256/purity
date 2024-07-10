@@ -27,6 +27,8 @@ SHELL := /bin/bash
 
 N := 23
 
-all:
-	dart compile exe -o app app.dart
-	./app.bin ${N}
+all: app.bin
+	./$? ${N}
+
+app.bin:
+	dart compile exe -o $@ app.dart
