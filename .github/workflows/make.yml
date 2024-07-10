@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@master
-      - uses: olafurpg/setup-scala@v11
+      - uses: olafurpg/setup-scala@v14
       - uses: ruby/setup-ruby@master
         with:
           ruby-version: '3.1'
