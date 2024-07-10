@@ -37,6 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: olafurpg/setup-scala@v14
+      - run: env
       - uses: ruby/setup-ruby@master
         with:
           ruby-version: '3.1'
