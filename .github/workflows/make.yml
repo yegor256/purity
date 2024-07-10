@@ -41,7 +41,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 20
-      - uses: olafurpg/setup-scala@v14
+      - uses: VirtusLab/scala-cli-setup@1.4.0
       - uses: ruby/setup-ruby@master
         with:
           ruby-version: '3.1'
