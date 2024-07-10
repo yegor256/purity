@@ -12,5 +12,6 @@ The languages are:
 * [Smalltalk](/smalltalk)
 * [Io](/io)
 * [Scala](/scala)
+* [Dart](/dart)
 
 If you know any other "pure" OOP languages, submit a pull request.
