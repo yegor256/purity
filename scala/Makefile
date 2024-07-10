@@ -22,12 +22,13 @@
 
 .SHELLFLAGS := -e -o pipefail -c
 .ONESHELL:
-.PHONY: all clean test $(LANGS)
+.PHONY: all
 SHELL := /bin/bash
-
-LANGS := $(wildcard */.)
 N := 23
 
-all: $(LANGS)
-$(LANGS):
-	$(MAKE) -C $@ N=${N}
+LIB=/opt/homebrew/Cellar/pmd/7.2.0/libexec/lib/scala-library-2.13.13.jar
+
+all: *.sc
+	rm -f *.class
+	scalac *.sc
+	java -cp "${LIB}:." App ${N}
