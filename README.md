@@ -11,5 +11,6 @@ The languages are:
 * [Ruby](/ruby)
 * [Smalltalk](/smalltalk)
 * [Io](/io)
+* [Scala](/scala)
 
 If you know any other "pure" OOP languages, submit a pull request.
