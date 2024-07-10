@@ -41,7 +41,7 @@ jobs:
           distribution: 'temurin'
           java-version: 20
       - uses: olafurpg/setup-scala@v14
-      - run: which scalac
+      - run: find /home/runner/ -name 'scala-library-*'
       - uses: ruby/setup-ruby@master
         with:
           ruby-version: '3.1'
