@@ -33,7 +33,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   make:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@master
       - uses: dart-lang/setup-dart@v1
