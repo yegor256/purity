@@ -46,7 +46,7 @@ jobs:
       - run: scalac --version
       - uses: ruby/setup-ruby@master
         with:
-          ruby-version: '3.4.9'
+          ruby-version: '3.4.10'
       - run: sudo apt-get install gnu-smalltalk=3.2.5-1.3ubuntu1
       - run: |
           set -e
